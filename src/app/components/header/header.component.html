@@ -1,0 +1,23 @@
+<p>
+  {{title}}
+</p>
+
+
+<ul>
+  <li *ngFor="let item of list1; let i=index">
+    {{item}} ----- {{i}}
+  </li>
+</ul>
+
+<br>
+
+<ul>
+  <li *ngFor="let item of list2">
+    {{item.name}}
+    <ol>
+      <li *ngFor="let item2 of item.namelist">
+          {{item2}}
+      </li>
+    </ol>
+  </li>
+</ul>

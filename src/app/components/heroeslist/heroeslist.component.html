@@ -1,0 +1,9 @@
+<h2>My Heroes</h2>
+<button (click)="requestData()">数据</button>
+<button (click)="requestJsonpData()">数据2</button>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes; let index=index" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+    <span class="badge">{{hero.id}}</span>{{hero.name}}
+  </li>
+</ul>
+<app-heroes [hero]="selectedHero"></app-heroes>
